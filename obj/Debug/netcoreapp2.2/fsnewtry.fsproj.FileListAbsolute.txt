@@ -1,0 +1,10 @@
+c:\Users\p_ede\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.deps.json
+c:\Users\p_ede\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.runtimeconfig.json
+c:\Users\p_ede\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.runtimeconfig.dev.json
+c:\Users\p_ede\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.dll
+c:\Users\p_ede\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.pdb
+c:\Users\p_ede\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.fsprojAssemblyReference.cache
+c:\Users\p_ede\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.AssemblyInfoInputs.cache
+c:\Users\p_ede\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.AssemblyInfo.fs
+c:\Users\p_ede\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.dll
+c:\Users\p_ede\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.pdb

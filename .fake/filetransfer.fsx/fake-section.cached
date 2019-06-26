@@ -1,0 +1,66 @@
+module Ft =
+    type FteAgent =
+        | LinSvcApl
+        | MF3
+    type QueueAgent =
+        | LinSvcApl
+    type MainframeAgent =
+        | MF1
+        | MF2
+        | MF3            
+    type FileToQueueInfo = 
+        {
+            /// source agent
+            SrcAgent: FteAgent;
+            /// sourcedirectory on the source agent
+            SourceDirectory: string;
+            /// an glob or regular expression
+            FilePattern: string;
+            DstAgent: QueueAgent;
+        }
+        member x.Generate = sprintf "generate F2Q %A" x
+    type FileToFileInfo = 
+        {
+            /// source agent
+            SrcAgent: FteAgent;
+            /// sourcedirectory on the source agent
+            SourceDirectory: string;
+            /// an glob or regular expression
+            FilePattern: string;
+            DstAgent: FteAgent;
+            DstDir: string
+        }
+        member x.Generate = sprintf "generate F2F %A" x
+    type FileTransfer =
+        | FileToQueue of FileToQueueInfo
+        | FileToFile of FileToFileInfo
+    let generate ft =
+        match ft with
+        | FileToQueue ftq -> ftq.Generate
+        | FileToFile ftf -> ftf.Generate
+    let generateAll transfers =
+        for ft in transfers do
+            generate ft |> printfn "%s"   
+
+open Ft
+let gftq = { 
+    SrcAgent=FteAgent.LinSvcApl;
+    SourceDirectory = @"c:\peter\edelman";
+    FilePattern = @"*.xml";
+    DstAgent=QueueAgent.LinSvcApl  }
+gftq.Generate
+printfn "%A" gftq.SrcAgent
+let agentname = sprintf "%A" gftq.SrcAgent
+let gftf = { 
+    SrcAgent=FteAgent.LinSvcApl;
+    SourceDirectory = @"c:\peter\edelman";
+    FilePattern = @"*.xml";
+    DstAgent=FteAgent.LinSvcApl
+    DstDir = @"c:\dstdir"  }
+
+let transfers = seq {
+    yield FileToQueue(gftq)
+    yield FileToFile(gftf)
+}
+do generateAll transfers
+

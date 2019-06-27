@@ -18,10 +18,18 @@ let makeFileTransfers =
         FilePattern = @"*.xml";
         DstAgent=FteAgent.LinSvcApl
         DstDir = @"c:\dstdir"  }
+
+    let wftq:WinFileToQueueInfo = { 
+        SrcAgent=WinAgent.WinSvcApl;
+        SourceDirectory = WinDirectory (@"c:\peter\edelman");
+        FilePattern = @"*.xml";
+        DstAgent=QueueAgent.LinSvcApl
+        }
     
     let transfers = seq {
         yield FileToQueue(gftq)
         yield FileToFile(gftf)
+        yield WinFileToQueue(wftq)
     }
     generateAll transfers
 

@@ -1,38 +1,7 @@
 ﻿// Learn more about F# at http://fsharp.org
 
 open System
-open Ft
-let makeFileTransfers =
-    let gftq:FileToQueueInfo =  { 
-        SrcAgent=FteAgent.LinSvcApl;
-        SourceDirectory = @"c:\peter\edelman";
-        FilePattern = @"*.xml";
-        DstAgent=QueueAgent.LinSvcApl  }
-    printfn "%s" gftq.Generate
-    printfn "%A" gftq.SrcAgent
-    let agentname = sprintf "%A" gftq.SrcAgent
-    // let gftf:FileToFileInfo = { 
-    let gftf = { 
-        SrcAgent=FteAgent.LinSvcApl;
-        SourceDirectory = @"c:\peter\edelman";
-        FilePattern = @"*.xml";
-        DstAgent=FteAgent.LinSvcApl
-        DstDir = @"c:\dstdir"  }
-
-    let wftq:WinFileToQueueInfo = { 
-        SrcAgent=WinAgent.WinSvcApl;
-        SourceDirectory = WinDirectory (@"c:\peter\edelman");
-        FilePattern = @"*.xml";
-        DstAgent=QueueAgent.LinSvcApl
-        }
-    
-    let transfers = seq {
-        yield FileToQueue(gftq)
-        yield FileToFile(gftf)
-        yield WinFileToQueue(wftq)
-    }
-    generateAll transfers
-
+open Ftest
 
 [<EntryPoint>]
 let main argv =

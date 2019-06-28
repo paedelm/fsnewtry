@@ -655,7 +655,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "4HzkBHc3w10M11HOvehBWmVSDqbzSAn3wPM/T6glUI2c/FpB6lsiHw1gj9NY6nGjdiJyjaAg9g/JafY8K9ao4g==",
+      "sha512": "hv659tG6KLnVXQP4YhXQL4L0ZqPhm4S4uJG9jGdPbKfL4LQJEwPhHMZj59cBbqDhTECx4KyDdNWEyhrq1Kj8Rw==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -791,23 +791,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\p_ede\\.nuget\\packages\\": {},
+    "C:\\Users\\m52b462\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\p_ede\\projects\\fsnewtry\\fsnewtry.fsproj",
+      "projectUniqueName": "C:\\ontwikkel\\projects\\fsnewtry\\fsnewtry.fsproj",
       "projectName": "fsnewtry",
-      "projectPath": "C:\\Users\\p_ede\\projects\\fsnewtry\\fsnewtry.fsproj",
-      "packagesPath": "C:\\Users\\p_ede\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\p_ede\\projects\\fsnewtry\\obj\\",
+      "projectPath": "C:\\ontwikkel\\projects\\fsnewtry\\fsnewtry.fsproj",
+      "packagesPath": "C:\\Users\\m52b462\\.nuget\\packages\\",
+      "outputPath": "C:\\ontwikkel\\projects\\fsnewtry\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\p_ede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\m52b462\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FileTransfer.fs" />
     <Compile Include="ft.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

@@ -1,5 +1,20 @@
+#if INTERACTIVE
 module Ft
+#else
+module Ft
+#endif
     open System.Text.RegularExpressions
+    // generic string with regex validation
+    let validate(value, re, title) =
+        let m = Regex(re).Match(value) 
+        if m.Success then value else failwith (sprintf "\"%s\" is not a valid \"%s\"" value title)
+    type RegexString(value, re, title) =
+        let value = validate(value, re, title)
+
+        member x.Value with get() = value
+        override x.ToString() = value
+
+    // Domain definitions for properties
     type WinAgent =
         | WinSvcApl
     type FteAgent =
@@ -11,21 +26,15 @@ module Ft
         | MF1
         | MF2
         | MF3 
-    let winexpr = @"^[a-zA-Z]:\\[\\\S|*\S]?.*$"
-    let validate(dir) =
-        let m = Regex(winexpr).Match(dir) 
-        if m.Success then dir else failwith (sprintf "%s not a valid windows directory" dir)
 
-    type WinDirectory(tdir:string) =
-        let dir = validate(tdir)
+    type WinDirectory(dir:string) =
+        /// Windows Directory like @"c:\dir\subdir\etc"
+        inherit RegexString(dir, @"^[a-zA-Z]:\\[\\\S|*\S]?.*$", "Windows Directory")
 
-        member x.Dir with get() = dir
-        override x.ToString() = dir
+    type UnixDirectory(dir:string) =
+        inherit RegexString(dir,@"(\/{1,1}(((\w)|(\.)|(\\\s))+\/)*((\w)|(\.)|(\\\s))+)|\/", "Unix Directory")
 
-    // type FtDirectory =
-    //     | NixDirectory of string
-    //     | WinDirectory of string
-    //     | MainframeDataset of string                   
+    // Domain definitions for structures
     type WinFileToQueueInfo = 
         {
             /// source agent
@@ -37,12 +46,12 @@ module Ft
             DstAgent: QueueAgent;
         }
         member x.Generate = sprintf "generate WF2Q %A" x
-    type FileToQueueInfo = 
+    type UnixFileToQueueInfo = 
         {
             /// source agent
             SrcAgent: FteAgent;
             /// sourcedirectory on the source agent
-            SourceDirectory: string;
+            SourceDirectory: UnixDirectory;
             /// an glob or regular expression
             FilePattern: string;
             DstAgent: QueueAgent;
@@ -63,12 +72,12 @@ module Ft
         member x.Generate = sprintf "generate F2F %A" x
     /// FileTransfer        
     type FileTransfer =
-        | FileToQueue of FileToQueueInfo
+        | UnixFileToQueue of UnixFileToQueueInfo
         | WinFileToQueue of WinFileToQueueInfo
         | FileToFile of FileToFileInfo
     let generate ft =
         match ft with
-        | FileToQueue ftq -> ftq.Generate
+        | UnixFileToQueue ftq -> ftq.Generate
         | FileToFile ftf -> ftf.Generate
         | WinFileToQueue wftq -> wftq.Generate
     let generateAll transfers =

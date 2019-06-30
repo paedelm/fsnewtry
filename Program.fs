@@ -1,42 +1,26 @@
 ﻿// Learn more about F# at http://fsharp.org
 
 open System
-open Ft
-let makeFileTransfers =
-    let gftq:FileToQueueInfo =  { 
-        SrcAgent=FteAgent.LinSvcApl;
-        SourceDirectory = @"c:\peter\edelman";
-        FilePattern = @"*.xml";
-        DstAgent=QueueAgent.LinSvcApl  }
-    printfn "%s" gftq.Generate
-    printfn "%A" gftq.SrcAgent
-    let agentname = sprintf "%A" gftq.SrcAgent
-    // let gftf:FileToFileInfo = { 
-    let gftf = { 
-        SrcAgent=FteAgent.LinSvcApl;
-        SourceDirectory = @"c:\peter\edelman";
-        FilePattern = @"*.xml";
-        DstAgent=FteAgent.LinSvcApl
-        DstDir = @"c:\dstdir"  }
-
-    let wftq:WinFileToQueueInfo = { 
-        SrcAgent=WinAgent.WinSvcApl;
-        SourceDirectory = WinDirectory (@"c:\peter\edelman");
-        FilePattern = @"*.xml";
-        DstAgent=QueueAgent.LinSvcApl
-        }
-    
-    let transfers = seq {
-        yield FileToQueue(gftq)
-        yield FileToFile(gftf)
-        yield WinFileToQueue(wftq)
-    }
-    generateAll transfers
-
+open Ftest
+open proc
+open Web
 
 [<EntryPoint>]
 let main argv =
     printfn "Hello World from F#!"
     do makeFileTransfers
+    async {
+        let fd1,fd2 = runProc "cmd" "/c hoi.cmd" None
+        for line in fd1 do printfn "fd1:%s" line
+        for line in fd2 do printfn "fd2:%s" line
+        } |> Async.RunSynchronously
+    try 
+        let result = Async.RunSynchronously(downLoadUrl("http://google.com"))
+        printfn "%A" result
+    with
+    | exdl -> 
+        printfn "%A" (exdl.GetBaseException())
+
+    // for line in outp do printfn "%s" line
     0 // return an integer exit code
 

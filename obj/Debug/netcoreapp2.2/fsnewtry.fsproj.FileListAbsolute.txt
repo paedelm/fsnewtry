@@ -8,3 +8,13 @@ c:\Users\p_ede\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.AssemblyInfoIn
 c:\Users\p_ede\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.AssemblyInfo.fs
 c:\Users\p_ede\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.dll
 c:\Users\p_ede\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.pdb
+C:\ontwikkel\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.deps.json
+C:\ontwikkel\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.runtimeconfig.json
+C:\ontwikkel\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.runtimeconfig.dev.json
+C:\ontwikkel\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.dll
+C:\ontwikkel\projects\fsnewtry\bin\Debug\netcoreapp2.2\fsnewtry.pdb
+C:\ontwikkel\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.fsprojAssemblyReference.cache
+C:\ontwikkel\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.AssemblyInfoInputs.cache
+C:\ontwikkel\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.AssemblyInfo.fs
+C:\ontwikkel\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.dll
+C:\ontwikkel\projects\fsnewtry\obj\Debug\netcoreapp2.2\fsnewtry.pdb

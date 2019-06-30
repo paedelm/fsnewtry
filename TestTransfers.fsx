@@ -1,30 +1,21 @@
-#load "FileTransfer.fsx"
+#define "FROMTT"
+#load "FileTransfer.fs"
+#load "ft.fs"
+#load "process.fs"
+#load "webclient.fs"
 open Ft
-let gftq:FileToQueueInfo = { 
-    SrcAgent=FteAgent.LinSvcApl;
-    SourceDirectory = @"c:\peter\edelman";
-    FilePattern = @"*.xml";
-    DstAgent=QueueAgent.LinSvcApl  }
-gftq.Generate
-printfn "%A" gftq.SrcAgent
-let agentname = sprintf "%A" gftq.SrcAgent
-let gftf = { 
-    SrcAgent=FteAgent.LinSvcApl;
-    SourceDirectory = @"c:\peter\edelman";
-    FilePattern = @"*.xml";
-    DstAgent=FteAgent.LinSvcApl
-    DstDir = @"c:\dstdir"  }
-
-let wftq:WinFileToQueueInfo = { 
-    SrcAgent=WinAgent.WinSvcApl;
-    SourceDirectory = WinDirectory (@"c:/peter\edelman");
-    FilePattern = @"*.xml";
-    DstAgent=QueueAgent.LinSvcApl
-    }
-printfn "%s" wftq.SourceDirectory.Dir
-let transfers = seq {
-    yield FileToQueue(gftq)
-    yield FileToFile(gftf)
-    yield WinFileToQueue(wftq)
-}
-do generateAll transfers
+open Ftest
+open Web
+open proc
+do makeFileTransfers
+async {
+    let fd1,fd2 = runProc "cmd" "/c hoi.cmd" None
+    for line in fd1 do printfn "fd1:%s" line
+    for line in fd2 do printfn "fd2:%s" line
+    } |> Async.RunSynchronously
+try 
+    let result = Async.RunSynchronously(downLoadUrl("http://googlebestaatniet.com"))
+    printfn "%A" result
+with
+| exdl -> 
+    printfn "%A" (exdl.GetBaseException())

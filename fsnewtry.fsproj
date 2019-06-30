@@ -5,8 +5,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="process.fs" />
+<<<<<<< HEAD
     <Compile Include="files.fs" />
     <Compile Include="webclient.fs" />
+=======
+>>>>>>> 614454b5234ef954fbaceb733e8f64dea6c75235
     <Compile Include="FileTransfer.fs" />
     <Compile Include="ft.fs" />
     <Compile Include="Program.fs" />

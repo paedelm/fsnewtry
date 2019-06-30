@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #define "FROMTT"
 #load "FileTransfer.fs"
 #load "ft.fs"
@@ -19,3 +20,10 @@ try
 with
 | exdl -> 
     printfn "%A" (exdl.GetBaseException())
+=======
+#load "FileTransfer.fs"
+#load "ft.fs"
+open Ft
+open Ftest
+do makeFileTransfers
+>>>>>>> 614454b5234ef954fbaceb733e8f64dea6c75235

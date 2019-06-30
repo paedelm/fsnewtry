@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 #if INTERACTIVE
 module Ftest
 #else
 module Ftest
 #endif
+=======
+module Ftest
+>>>>>>> 614454b5234ef954fbaceb733e8f64dea6c75235
     open System
     open Ft
     let makeFileTransfers =

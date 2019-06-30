@@ -4,15 +4,12 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="process.fs" />
-<<<<<<< HEAD
-    <Compile Include="files.fs" />
-    <Compile Include="webclient.fs" />
-=======
->>>>>>> 614454b5234ef954fbaceb733e8f64dea6c75235
-    <Compile Include="FileTransfer.fs" />
-    <Compile Include="ft.fs" />
-    <Compile Include="Program.fs" />
+    <Compile Include="process.fs"/>
+    <Compile Include="files.fs"/>
+    <Compile Include="webclient.fs"/>
+    <Compile Include="FileTransfer.fs"/>
+    <Compile Include="ft.fs"/>
+    <Compile Include="Program.fs"/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FSharp.Data" Version="3.1.1" />

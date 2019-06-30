@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ontwikkel\\projects\\fsnewtry\\fsnewtry.fsproj": {}
+    "C:\\Users\\p_ede\\projects\\fsnewtry\\fsnewtry.fsproj": {}
   },
   "projects": {
-    "C:\\ontwikkel\\projects\\fsnewtry\\fsnewtry.fsproj": {
+    "C:\\Users\\p_ede\\projects\\fsnewtry\\fsnewtry.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ontwikkel\\projects\\fsnewtry\\fsnewtry.fsproj",
+        "projectUniqueName": "C:\\Users\\p_ede\\projects\\fsnewtry\\fsnewtry.fsproj",
         "projectName": "fsnewtry",
-        "projectPath": "C:\\ontwikkel\\projects\\fsnewtry\\fsnewtry.fsproj",
-        "packagesPath": "C:\\Users\\m52b462\\.nuget\\packages\\",
-        "outputPath": "C:\\ontwikkel\\projects\\fsnewtry\\obj\\",
+        "projectPath": "C:\\Users\\p_ede\\projects\\fsnewtry\\fsnewtry.fsproj",
+        "packagesPath": "C:\\Users\\p_ede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\p_ede\\projects\\fsnewtry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\m52b462\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\p_ede\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

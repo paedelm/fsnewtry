@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 #if INTERACTIVE && !FROMTT
 module proc
 #else
 module proc
 #endif
-=======
-module proc 
->>>>>>> 614454b5234ef954fbaceb733e8f64dea6c75235
     open System
     open System.Diagnostics
 

@@ -1,14 +1,15 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "6276bef5f7df044c25079fb0397a18e9c2f30a34"
+    "signature": "89056c57578d583ca74061156375cd89b52869ff"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "fsnewtry/1.0.0": {
         "dependencies": {
-          "FSharp.Core": "4.6.2"
+          "FSharp.Core": "4.6.2",
+          "FSharp.Data": "3.1.1"
         },
         "runtime": {
           "fsnewtry.dll": {}
@@ -65,6 +66,17 @@
             "locale": "zh-Hant"
           }
         }
+      },
+      "FSharp.Data/3.1.1": {
+        "dependencies": {
+          "FSharp.Core": "4.6.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Data.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
       }
     }
   },
@@ -80,6 +92,13 @@
       "sha512": "sha512-/waJ3a7u7MjFOGnXOfokbG1N1FH7VCmP3Fw1tJ8Q75kIj60LYBL3eYzab9hDimL5E21uhQ/1wf04M3dRAYemlw==",
       "path": "fsharp.core/4.6.2",
       "hashPath": "fsharp.core.4.6.2.nupkg.sha512"
+    },
+    "FSharp.Data/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EZl1iFyxWEn+zZenJY+uldtmzsup/GovJLWnvBbFrj5hiFL3wKbY9pDhps4xfNmvUGfxypsYdIcVGHXQETVx1w==",
+      "path": "fsharp.data/3.1.1",
+      "hashPath": "fsharp.data.3.1.1.nupkg.sha512"
     }
   }
 }

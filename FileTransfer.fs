@@ -1,4 +1,8 @@
+#if INTERACTIVE
 module Ft
+#else
+module Ft
+#endif
     open System.Text.RegularExpressions
     // generic string with regex validation
     let validate(value, re, title) =

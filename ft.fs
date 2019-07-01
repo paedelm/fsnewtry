@@ -1,4 +1,8 @@
+#if INTERACTIVE
 module Ftest
+#else
+module Ftest
+#endif
     open System
     open Ft
     let makeFileTransfers =

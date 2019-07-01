@@ -1,4 +1,8 @@
-module proc 
+#if INTERACTIVE && !FROMTT
+module proc
+#else
+module proc
+#endif
     open System
     open System.Diagnostics
 
